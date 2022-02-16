@@ -29,7 +29,7 @@ function draw(block) {
     sY7 = sY5 - side_length;
     sX7 = sX5;
 
-    ctx.fillStyle = "#222";
+    ctx.fillStyle = "#aaaaaa";
     ctx.beginPath();
     ctx.moveTo(sX1,sY1);
     ctx.lineTo(sX2,sY2);
@@ -39,23 +39,23 @@ function draw(block) {
     ctx.closePath();
     ctx.fill();
 
-    ctx.fillStyle = "#aaa";
-    ctx.beginPath();
-    ctx.moveTo(sX4,sY4);
-    ctx.lineTo(sX5,sY5);
-    ctx.lineTo(sX6,sY6);
-    ctx.lineTo(sX7,sY7);
-    ctx.lineTo(sX4,sY4);
-    ctx.closePath();
-    ctx.fill();
-
-    ctx.fillStyle = "#666";
+    ctx.fillStyle = "#bbbbbb";
     ctx.beginPath();
     ctx.moveTo(sX2,sY2);
     ctx.lineTo(sX3,sY3);
     ctx.lineTo(sX6,sY6);
     ctx.lineTo(sX5,sY5);
     ctx.lineTo(sX2,sY2);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.fillStyle = "#cccccc";
+    ctx.beginPath();
+    ctx.moveTo(sX4,sY4);
+    ctx.lineTo(sX5,sY5);
+    ctx.lineTo(sX6,sY6);
+    ctx.lineTo(sX7,sY7);
+    ctx.lineTo(sX4,sY4);
     ctx.closePath();
     ctx.fill();
 
