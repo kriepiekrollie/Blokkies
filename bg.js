@@ -70,12 +70,19 @@ for (i = 0; i <= mx + 100; i += d)
 
 t = 0;
 
+mouseX = 0; mouseY = 0;
+onmousemove = function(e){mouseX = e.clientX; mouseY = e.clientY;}
+
 function render() {
     clear();
     for (i = 0; i < blocks.length; i++)
         draw(blocks[i]);
-    for (i = 0; i < blocks.length; i++)
-        blocks[i].z = 10 + 10 * Math.sin(((7*blocks[i].x + 3*blocks[i].y) + t)/900);
+    for (i = 0; i < blocks.length; i++) {
+        sexY = (blocks[i].x + blocks[i].y) / 2 - 90;
+        seXy = (blocks[i].x - blocks[i].y) * sqrt3 / 2 + 70;
+        dist_from_mouse2 = (mouseX - seXy) * (mouseX - seXy) + (mouseY - sexY) * (mouseY - sexY);
+        blocks[i].z = -20 * Math.exp(-dist_from_mouse2 / 30000);
+    }
     t+= 30;
 }
 
